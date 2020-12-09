@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 import com.learning.sfgdi.controller.ContructorInjectedController;
+import com.learning.sfgdi.controller.I18NController;
 import com.learning.sfgdi.controller.MyController;
 import com.learning.sfgdi.controller.PropertyInjectedController;
 import com.learning.sfgdi.controller.SetterInjectedController;
@@ -22,6 +23,8 @@ public class SfgDiApplication {
 		System.out.println(setterInjectedController.getGreeting());
 		ContructorInjectedController contructorInjectedController = ctx.getBean("contructorInjectedController",ContructorInjectedController.class);
 		System.out.println(contructorInjectedController.getGreeting());
+		I18NController i18NController = ctx.getBean("i18NController",I18NController.class);
+		System.out.println(i18NController.getGreeting());
 	}
 
 }
